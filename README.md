@@ -69,19 +69,3 @@ To run:
 make test
 ```
 
-## 🎯 Design Highlights
-
-- All iterator classes are **nested templates** inside `MyContainer<T>`, sharing access to the raw `data` array.
-- Iterators maintain an `order[]` index buffer to avoid mutating the container.
-- Clean single-header implementation: all generic/template code lives in `MyContainer.hpp`.
-
-## ✅ To Do / Improvements
-
-- **Replace raw `new[]`/`delete[]`** with `std::vector<int>` for exception safety and clarity.
-- Consider implementing **bidirectional iterators** (`operator--`, etc.).
-- Add support for C++20 **concepts** (e.g. `std::totally_ordered`) to enforce comparable types.
-- (Optional) Add `const_iterator` overloads and `operator==`.
-
-## 📚 License
-
-This project is available under the MIT License, but you're welcome to tailor it for coursework or personal use.
